@@ -30,8 +30,8 @@ Also, the $\beta$ has a value of 2% for P-X and 5% for P-X-T calculation. $\sigm
 
 The performance of the Active learning workflow is below for both the phase spaces and three systems:
 
-| Mixture | Kernel | Data requirement (% of ground truth) | MRE<sub>(species 1)</sub> (%) | MRE<sub>(species 2)</sub> (%) | R<sup>2</sup><sub>(species 1)</sub> | R\textsuperscript{2}\textsubscript{(species 2)} |
+| Mixture | Kernel | Data requirement (% of ground truth) | MRE<sub>(species 1)</sub> (%) | MRE<sub>(species 2)</sub> (%) | R<sup>2</sup><sub>(species 1)</sub> | R<sup>2</sup><sub>(species 2)</sub> |
 | --- | --- | --- | --- | --- | --- | --- |
-| CO\textsubscript{2}-CH\textsubscript{4} | RBF+RBF+RBF | 6.611 | 5.461 | 9.256 | 0.988 | 0.990 |
+| CO<sub>2</sub>-CH<sub>4</sub> | RBF+RBF+RBF | 6.611 | 5.461 | 9.256 | 0.988 | 0.990 |
 | Xe-Kr | RBF+RBF+RBF | 6.650 | 4.850 | 7.025 | 0.990 | 0.990|
-| H\textsubscript{2}S-CO\textsubscript{2} | RQ | 5.549 | 8.276 | 11.682 | 0.976 | 0.986 |
+| H<sub>2</sub>S-CO<sub>2</sub> | RQ | 5.549 | 8.276 | 11.682 | 0.976 | 0.986 |
