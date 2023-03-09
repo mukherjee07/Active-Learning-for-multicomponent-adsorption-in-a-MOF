@@ -1,4 +1,4 @@
-# Active-Learning-for-gas-mixture-adsorption-prediciton
+# Active-Learning-for-gas-mixture-adsorption-prediciton #
 `P-X` folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures.
 
 The prior_sample.csv and complete.csv are the prior and ground truth data for the systems.
