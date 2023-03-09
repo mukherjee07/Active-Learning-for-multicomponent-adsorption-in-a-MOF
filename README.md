@@ -6,4 +6,12 @@ The learning starts from pre-processing the prior data. Pressure and temperature
 ```math
      ACC_{i} = 100 \times \frac{X_{+}}{X_{+}+X_{-}}
 ```
-
+```math
+\begin{aligned}
+     \text{If at $X_{n_{i}}$,} \;
+     |\frac{\sigma_{n_{i}}}{y^{'}_{n_{i}}}| <= \beta_{i}, \;
+     \text{then,} \; X_{+} = X_{+} + 1 \;
+     \text{else,} \;
+      X_{-} = X_{-} + 1
+      \end{aligned}
+ ```
