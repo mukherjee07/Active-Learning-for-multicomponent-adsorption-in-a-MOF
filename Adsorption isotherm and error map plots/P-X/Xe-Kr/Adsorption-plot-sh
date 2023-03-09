@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#$ -q hpc@@colon 
+#$ -N Adsorption_5%_PX
+
+module load python
+python3 GP_Adsorption_plot_PX.py 
+sed -i 's/[][]//' adsorption_0.1.csv 
+sed -i 's/[][]//' adsorption_0.2.csv
+sed -i 's/[][]//' adsorption_0.3.csv
+sed -i 's/[][]//' adsorption_0.4.csv 
+sed -i 's/[][]//' adsorption_0.5.csv 
+sed -i 's/[][]//' adsorption_0.6.csv 
+sed -i 's/[][]//' adsorption_0.7.csv 
+sed -i 's/[][]//' adsorption_0.8.csv 
+sed -i 's/[][]//' adsorption_0.9.csv 
+sed -i 's/[][]//' adsorption_0.1.csv 
+sed -i 's/[][]//' adsorption_0.2.csv
+sed -i 's/[][]//' adsorption_0.3.csv
+sed -i 's/[][]//' adsorption_0.4.csv 
+sed -i 's/[][]//' adsorption_0.5.csv 
+sed -i 's/[][]//' adsorption_0.6.csv 
+sed -i 's/[][]//' adsorption_0.7.csv 
+sed -i 's/[][]//' adsorption_0.8.csv 
+sed -i 's/[][]//' adsorption_0.9.csv 
+
+#Creating the variable for X
+MF=(0.02 0.04 0.06 0.08 0.1 0.12 0.14 0.16 0.18 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.94 0.98)
+module load python
+for ((i=0;i<=18;i++))
+do
+mkdir ${MF[$i]}
+cd ${MF[$i]}
+cp ../adsorption_${MF[$i]}.csv ../GP_adplot.py .
+sed -i 's/XXX/'${MF[$i]}'/' GP_adplot.py
+python3 GP_adplot.py
+cp *.png ../
+cd ..
+done 

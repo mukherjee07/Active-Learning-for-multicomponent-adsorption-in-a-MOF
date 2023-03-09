@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#$ -q hpc@@colon 
+#$ -N Error_PX
+
+module load python
+python3 GP_relative_Error.py 
