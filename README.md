@@ -42,6 +42,7 @@ Mean Relative Error (MRE):
     \text{Data Requirement in \%} = \frac{{N_{Prior}} + {N_{Iterations-to-90\% Accuracy}}}{{N_{Ground-truth}}}\times100
 ```
 
+## Results ##
 
 The performance of the Active learning workflow is below for both the phase spaces and three systems:
 
