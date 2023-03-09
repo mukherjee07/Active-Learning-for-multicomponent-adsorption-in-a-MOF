@@ -16,6 +16,9 @@ The goal was to predict the adsorption isotherm of a binary mixture adsorption i
 
 We investigated three different gas mixtures (CO<sub>2</sub>-CH<sub>4</sub>, Xe-Kr, and H<sub>2</sub>S-CO<sub>2</sub>) at different pressure, temperature and mole fraction conditions (thus 2 different studies). The low pressure limit was same for all mixtures ($10^{-6}$ bar) but the high pressure limit was different. The temperaure (200-400K) and mole-fraction (0.02-0.98) range were same. This paper is soon to be submitted.
 
+## Ground-truth ##
+Ground-truth data was generated using grand-canonical Monte Carlo (GCMC) simulations and were performed in the open-source software RASPA. Forcefield for CO<sub>2</sub>, CH<sub>4</sub>, Xe, Kr, and H<sub>2</sub>S used were TraPPE and for Cu-BTC it was Universal forcefield (UFF). Also, component-fractional Monte Carlo (CFC-GCMC) method was used to sample the GCMC simulation. All the ground truth data can be found in the complete.csv in the P-X and P-X-T folders.
+
 <img width="1227" alt="Screen Shot 2023-03-09 at 1 24 16 AM" src="https://user-images.githubusercontent.com/36941306/223938253-d6953813-48cd-44b8-8aee-1f82f98f2d53.png">
 
 ## Algorithm ##
