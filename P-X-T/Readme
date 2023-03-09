@@ -1,2 +1,2 @@
 Active learning in the P-X-T phase space.
-The GP_mixtures.py code will generate a mean.csv file which will have all the data like GP-predicted error, $R^{2}$, MRE etc.
+The GP_mixtures.py code will generate a mean.csv file which will have all the data like GP-predicted error, Coefficient of determination, MRE etc.
