@@ -1,1 +1,9 @@
 Active learning in P-X phase space
+Steps to run the files listed here:
+1. Run the Active-learning-sh file in the cluster. 
+2. Active-learning-sh file will run GP_mixtures.py file which will take data from prior_Sample.csv and perform GP fit, and give out the accuracy and the next points to sample
+3. The Shell script will add the next sample to prior_Sample.csv, and step 2 will again be repeated unless the accuracy criteria gets satisfied.
+4. Also, GP_mixtures will continue to add performance data to a mean.csv files like MRE, Correlation coefficent, Maximum GP error using the ground truth data, which is complete.csv
+5. After the learning is finished, one can plots the final adsorption and error heat maps using the plotter data files from the Adsorption isotherm and error heat map folder.
+
+PS: The process for P-X-T is the same expect the prior and test set distribution is different.
