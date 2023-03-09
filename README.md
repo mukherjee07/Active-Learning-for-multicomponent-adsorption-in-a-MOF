@@ -1,12 +1,13 @@
 # Active-Learning-for-gas-mixture-adsorption-prediciton #
 `P-X` folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures.
-
+## Files and Folders ##
 The prior_sample.csv and complete.csv are the prior and ground truth data for the systems.
 GP_mixtures.py is the Active learning engine (with dual-GP model)
 Active-learning-sh is the model updation handler which works in linux environment. This was based on Notre Dame Center for computing resource which is a grid-engine system. One can modify the first few lines depending on the specific linux environment or to run it locally, the first line can be removed as well.
 
 `P-X-T` folder: Active learning code for adsorption prediction in P-X-T phase space for 3 gas mixtures.
 Same process as P-X phase space.
+## Algorithm ##
 A general explanation of the workflow is outline below:
 
 ![Krish_AL_mixtures_workflow](https://user-images.githubusercontent.com/36941306/223895808-1b404ce3-b044-44fe-be13-f31a2f252ccc.png)
@@ -28,7 +29,7 @@ The Accuracy parameter is defined as follows:
  ```
 Also, the $\beta$ has a value of 2% for P-X and 5% for P-X-T calculation. $\sigma_{n_{i}}$ and  $y_{n_{i}}$ are the uncertainty and adsorption value (scaled) associated with the test point $X_{n_{i}}$. The threshold value $\beta_{i}$ is user-defined and can be set on the basis of the desired confidence the user needs. Also, we have kept the $\beta$ values same for the all the species in the three gas mixtures. We had $\beta$ set to 2\% for the P–X phase space, while we had chosen a high upper limit of 5\% for active learning in the P–X–T space.
 
-Key Performance parameters:
+## Key Performance parameters ##
 
 Mean Relative Error (MRE):
 
