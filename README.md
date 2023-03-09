@@ -10,7 +10,7 @@ Active-learning-sh is the model updation handler which works in linux environmen
 Same process as P-X phase space.
 
 ## System ##
-The goal was to predict the adsorption isotherm of a binary mixture adsorption in MOFs using an Active learning protocol.
+The goal was to predict the adsorption isotherm of a binary mixture adsorption in a Cu-BTC MOF (also known as HKUST-1) using an Active learning protocol.
 
 We investigated three different gas mixtures (CO<sub>2</sub>-CH<sub>4</sub>, Xe-Kr, and H<sub>2</sub>S-CO<sub>2</sub>) at different pressure, temperature and mole fraction conditions (thus 2 different studies). The low pressure limit was same for all mixtures ($10^{-6}$ bar) but the high pressure limit was different. The temperaure (200-400K) and mole-fraction (0.02-0.98) range were same. This paper is soon to be submitted. More details will follow.
 
