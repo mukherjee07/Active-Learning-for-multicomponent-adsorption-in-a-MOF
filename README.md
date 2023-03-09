@@ -39,7 +39,7 @@ Mean Relative Error (MRE):
 ```
 
 ```math
-    \text{Data Requirement in \%} = \frac{{N_{Prior}} + {N_{Iterations to 90\% Accuracy}}}{{N_{Ground truth}}}\times100
+    \text{Data Requirement in \%} = \frac{{N_{Prior}} + {N_{Iterations-to-90\% Accuracy}}}{{N_{Ground-truth}}}\times100
 ```
 
 
