@@ -28,6 +28,19 @@ The Accuracy parameter is defined as follows:
  ```
 Also, the $\beta$ has a value of 2% for P-X and 5% for P-X-T calculation. $\sigma_{n_{i}}$ and  $y_{n_{i}}$ are the uncertainty and adsorption value (scaled) associated with the test point $X_{n_{i}}$. The threshold value $\beta_{i}$ is user-defined and can be set on the basis of the desired confidence the user needs. Also, we have kept the $\beta$ values same for the all the species in the three gas mixtures. We had $\beta$ set to 2\% for the P–X phase space, while we had chosen a high upper limit of 5\% for active learning in the P–X–T space.
 
+Key Performance parameters:
+
+Mean Relative Error (MRE):
+
+```math
+    \text{MRE in \%} = \left(\sum_{i=1}^{n} \Bigg|{\frac{Y_{\text{GP-predict}}(x_i) - Y_{\text{GCMC}}(x_i)}{Y_{\text{GCMC}}(x_i)+\boldsymbol{\epsilon}}}\Bigg|\right) \times \frac{100}{n}
+```
+
+```math
+    \text{Data Requirement in \%} = \frac{\text{N\textsubscript{Prior}} + \text{N\textsubscript{Iterations to 90\% Accuracy}}}{\text{N\textsubscript{Ground truth}}}\times100
+```
+
+
 The performance of the Active learning workflow is below for both the phase spaces and three systems:
 
 Results for the P-X phase space:
