@@ -1,6 +1,7 @@
 # Active-Learning-for-gas-mixture-adsorption-prediciton #
-`P-X` folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures.
 ## Files and Folders ##
+`P-X` folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures.
+
 The prior_sample.csv and complete.csv are the prior and ground truth data for the systems.
 GP_mixtures.py is the Active learning engine (with dual-GP model)
 Active-learning-sh is the model updation handler which works in linux environment. This was based on Notre Dame Center for computing resource which is a grid-engine system. One can modify the first few lines depending on the specific linux environment or to run it locally, the first line can be removed as well.
