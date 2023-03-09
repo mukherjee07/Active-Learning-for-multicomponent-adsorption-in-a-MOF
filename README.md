@@ -3,6 +3,7 @@
 
 Active learning workflow for predicting adsorption using gaussian process regression (GPR). 
 The learning starts from pre-processing the prior data. Pressure and temperature are standardised, while the mole-fraction is linearly scaled to –1 and 1, i.e. X* = (X - 1/2)x25/12. Then it is passed through the dual-GPs, one for each species. Then prediction are done, and the associated uncertainties are extracted. The accuracies for both the species are tested for convergence. If any of the accuracy criteria is not met, learning continues, and the point with the highest uncertainty is added to the prior data. The active learning continues until the convergence condition is satisfied.
+The Accuracy parameter is defined as follows:
 ```math
      ACC_{i} = 100 \times \frac{X_{+}}{X_{+}+X_{-}}
 ```
@@ -15,3 +16,4 @@ The learning starts from pre-processing the prior data. Pressure and temperature
       X_{-} = X_{-} + 1
       \end{aligned}
  ```
+Also, the $$\beta$$ has a value of 2% for P-X and 5% for P-X-T calculation.
