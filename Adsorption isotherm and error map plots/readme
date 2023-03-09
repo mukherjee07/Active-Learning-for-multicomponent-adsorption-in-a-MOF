@@ -1,1 +1,7 @@
+Steps to run the files are described below:
 
+1. Run Adsorption-plot-sh
+2. This will run the GP_Adsorption***.py file, which wil generate the adsorption data in a csv format
+3. Then GP_adplot will run which wil generate the adsorption isotherm plots
+4. Then GP_relative_error.py plot will run to create the error.csv files
+5. The error_heatmap***py can be used to generate the error heat map plots
