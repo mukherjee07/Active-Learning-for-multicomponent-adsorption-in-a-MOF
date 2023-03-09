@@ -1,4 +1,6 @@
 # Active-Learning-for-gas-mixture-adsorption-prediciton
+`P-X` folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures
+`P-X-T` folder: Active learning code for adsorption prediction in P-X-T phase space for 3 gas mixtures
 ![Krish_AL_mixtures_workflow](https://user-images.githubusercontent.com/36941306/223895808-1b404ce3-b044-44fe-be13-f31a2f252ccc.png)
 
 Active learning workflow for predicting adsorption using gaussian process regression (GPR). 
