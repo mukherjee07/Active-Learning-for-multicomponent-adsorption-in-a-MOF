@@ -45,6 +45,7 @@ Mean Relative Error (MRE):
 ```math
     \text{MRE in \%} = \left(\sum_{i=1}^{n} \Bigg|{\frac{Y_{\text{GP-predict}}(x_i) - Y_{\text{GCMC}}(x_i)}{Y_{\text{GCMC}}(x_i)+\boldsymbol{\epsilon}}}\Bigg|\right) \times \frac{100}{n}
 ```
+The $\boldsymbol{\epsilon}$ (= $10^{-3}$) is added to the denominator to avoid numerical issues since adsorption in some phase spaces can reach 0. 
 Data requirement (% of ground truth):
 ```math
     \text{Data Requirement in \%} = \frac{{N_{Prior}} + {N_{Iterations-to-90\% Accuracy}}}{{N_{Ground-truth}}}\times100
