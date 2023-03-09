@@ -46,10 +46,13 @@ Mean Relative Error (MRE):
     \text{MRE in \%} = \left(\sum_{i=1}^{n} \Bigg|{\frac{Y_{\text{GP-predict}}(x_i) - Y_{\text{GCMC}}(x_i)}{Y_{\text{GCMC}}(x_i)+\boldsymbol{\epsilon}}}\Bigg|\right) \times \frac{100}{n}
 ```
 The $\boldsymbol{\epsilon}$ (= $10^{-3}$) is added to the denominator to avoid numerical issues since adsorption in some phase spaces can reach 0. 
+
 Data requirement (% of ground truth):
 ```math
     \text{Data Requirement in \%} = \frac{{N_{Prior}} + {N_{Iterations-to-90\% Accuracy}}}{{N_{Ground-truth}}}\times100
 ```
+Note $N_{Prior}$ for P-X and P-X-T were constant at 54 and 90, respectively. While $N_{Ground-truth}$ was 2499 (51P x 49X) for P-X and 2542 (21P x 11X x 11T) for P-X-T.
+
 R<sup>2</sup> (The coefficient of Determination):
 ```math
 R^2(Y_{\text{GCMC}}, Y_{\text{GP-predict}}) = 1 - \frac{{\sum_{i=1}^{n}(Y_{\text{GCMC}}(x_i) - Y_{\text{GP-predict}}(x_i))^2}}{{\sum_{i=1}^{n}}{(Y_{\text{GCMC}}(x_i) - \overline{Y_{\text{GCMC}}(x_i)})^2}}
