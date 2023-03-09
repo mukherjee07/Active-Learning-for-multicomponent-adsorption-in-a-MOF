@@ -37,9 +37,13 @@ Mean Relative Error (MRE):
 ```math
     \text{MRE in \%} = \left(\sum_{i=1}^{n} \Bigg|{\frac{Y_{\text{GP-predict}}(x_i) - Y_{\text{GCMC}}(x_i)}{Y_{\text{GCMC}}(x_i)+\boldsymbol{\epsilon}}}\Bigg|\right) \times \frac{100}{n}
 ```
-
+Data requirement (% of ground truth):
 ```math
     \text{Data Requirement in \%} = \frac{{N_{Prior}} + {N_{Iterations-to-90\% Accuracy}}}{{N_{Ground-truth}}}\times100
+```
+R<sup>2</sup>:
+```math
+
 ```
 
 ## Results ##
