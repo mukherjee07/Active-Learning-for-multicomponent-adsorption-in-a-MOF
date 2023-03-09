@@ -16,4 +16,4 @@ The Accuracy parameter is defined as follows:
       X_{-} = X_{-} + 1
       \end{aligned}
  ```
-Also, the $$\beta$$ has a value of 2% for P-X and 5% for P-X-T calculation.
+Also, the $\beta$ has a value of 2% for P-X and 5% for P-X-T calculation.
