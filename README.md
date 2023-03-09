@@ -17,7 +17,7 @@ We investigated three different gas mixtures (CO<sub>2</sub>-CH<sub>4</sub>, Xe-
 <img width="1227" alt="Screen Shot 2023-03-09 at 1 24 16 AM" src="https://user-images.githubusercontent.com/36941306/223938253-d6953813-48cd-44b8-8aee-1f82f98f2d53.png">
 
 ## Algorithm ##
-A general explanation of the workflow outline is shown below:
+A general workflow outline is shown below:
 
 ![Krish_AL_mixtures_workflow](https://user-images.githubusercontent.com/36941306/223895808-1b404ce3-b044-44fe-be13-f31a2f252ccc.png)
 
