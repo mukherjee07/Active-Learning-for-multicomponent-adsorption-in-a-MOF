@@ -1,4 +1,4 @@
-# Active-Learning-for-gas-mixture-adsorption-prediciton #
+# Active-Learning-for-gas-mixture-adsorption-prediction #
 ## Files and Folders ##
 `P-X` folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures.
 
