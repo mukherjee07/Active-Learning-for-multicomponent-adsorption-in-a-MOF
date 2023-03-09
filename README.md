@@ -43,7 +43,7 @@ Data requirement (% of ground truth):
 ```
 R<sup>2</sup> (The coefficient of Determination):
 ```math
-R^2(Y_{\text{GCMC}}, Y_{\text{GP-predict}}) = 1 - \frac{{\sum_{i=1}^{n} (Y_{\text{GCMC}}(x_i) - Y_{\text{GP-predict}}(x_i))^2}}{{\sum_{i=1}^{n} (Y_{\text{GCMC}}(x_i) - \overline{Y_{\text{GCMC}}(x_i)})^2}}
+R^2(Y_{\text{GCMC}}, Y_{\text{GP-predict}}) = 1 - \frac{{\sum_{i=1}^{n}(Y_{\text{GCMC}}(x_i) - Y_{\text{GP-predict}}(x_i))^2}}{{\sum_{i=1}^{n}}(Y_{\text{GCMC}}(x_i) - \overline{Y_{\text{GCMC}}(x_i)})^2}}
 ```
 
 ## Results ##
