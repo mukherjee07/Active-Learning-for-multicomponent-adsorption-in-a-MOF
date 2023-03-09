@@ -1,0 +1,139 @@
+#!/bin/bash
+
+#$ -q hpc@@colon
+#$ -N PTX_CO2CH4
+
+#### ------- Objective ------- #### 
+## To run methane in Cu-BTC MOF simulations until we get a max. rel_ch4ative error within 2%
+
+#Making a datafile
+data="prior_Sample.csv"
+
+#Initialising a variable called one
+One=1
+
+# Declaring the number of samples present in the prior sample
+N_Samp=$(wc -l < prior_Sample.csv)
+
+#Removing 1 from N_Samp, since the first row was coloumn names
+N_Samp=$[ $N_Samp - $One ]
+
+#finding the max number of iterations from the complete dataset
+Max=$(wc -l < complete.csv)
+Max=$[ $Max - $One ]
+
+##creating error files and populating the header line at the top
+
+#checking if the files exist or not and then removing them
+#GP-predicted relative error
+if [ -f rel_ch4.csv ]; then
+rm rel_ch4.csv
+fi
+
+if [ -f rel_co2.csv ]; then
+rm rel_co2.csv
+fi
+
+#Mean error
+if [ -f mean.csv ]; then
+rm mean.csv
+fi
+
+#creating those files
+touch rel_ch4.csv rel_co2.csv mean.csv
+
+#populating the top row
+for ((i=1;i<=${Max};i++))
+do
+	echo -n "${i}," >> rel_ch4.csv
+	echo -n "${i}," >> rel_co2.csv
+done
+
+echo "GP-based_mean_CO2,GP-based_mean_CH4,max_GP_CO2,max_GP_CH4,r2_CO2,r2_CH4,true_rel_error_CO2,true_rel_error_Ch4,ACC_R_CO2,ACC_R_CH4,ACC_C_CO2,ACC_C_CH4" >> mean.csv
+
+#going to the next line in these files
+echo " " >> rel_ch4.csv
+echo " " >> rel_co2.csv
+
+##### -----------   TESTING    -----------
+#Testing N_samp --- generally test lines should be commented out when the code is running well
+#echo $N_Samp
+#### ------------ TESTING DONE -----------
+
+#Declaring a string variable Fin which would compare if the active learning was successful or not
+Fin="NOT_DONE"
+D="DONE"
+
+#Going for the max number of loops, in case if loop inside our for does not stop
+for ((i=1;i<=${Max};i++))
+do
+
+	#creating output for python
+	if [[ -f output ]]; then
+	rm output
+	touch output
+	fi
+	#Loading modules
+	module load python
+
+	# funneling the python output to output
+	python3 GP_mixtures.py > output
+
+	#Initialising variables that will store the array Index for max. uncertainty, and the flag which tells if the code has converged or not
+	Index=$(awk 'FNR==2 {print $1}' output)
+	Flag=$(awk 'FNR==1 {print $1}' output)
+	
+	##### -----------   TESTING    -----------
+	#echo $Pressure,$Temp
+	#Flag=${lim#0}
+	#echo $Flag
+	#removing the output file
+	#rm output
+	#### ------------ TESTING DONE -----------
+	
+	#### --------- Running a script to extract RRMSE and Rel. Error ---------- ####		
+	
+	#python error_estimator.py
+	
+	#going to the next line in these files
+	echo " " >> mean.csv
+	
+	#Removing brackets in the mean.csv from MRE output
+	sed -i 's/[][]//' mean.csv
+	sed -i 's/[][]//' mean.csv
+	sed -i 's/[][]//' mean.csv
+	sed -i 's/[][]//' mean.csv
+	
+	#### --------- Error extraction is completed  --------- ####
+
+	#converting Index from a string to integer
+	Index=${Index#0}
+	#unloading python 3.7 (the latest version) since RASPA is incompatible with Python 3.7
+	module unload python
+
+	##Checking if the uncertainty (sigma) in co2 is lower than the limit; if not we need to do more simulations
+	if [[ ${Flag} == ${Fin} ]]; 
+	then
+		# Printing whether the code has converged or not, and the index with max. uncertainty
+		echo "Active learning for co2 and ch4 prediction is still not finished!"
+		
+		#Updating the index position to extract the next sampling points
+		Index=$[ $Index + $One + $One ]
+		
+		#Adding the next pressure simulation point
+		N_Samp=$[ $N_Samp + $One ]
+		Next=$(awk 'FNR=='${Index}' {print $1}' complete.csv)
+
+		#Updating the prior --> posterior
+		echo "$Next" >> prior_Sample.csv
+	
+	##Checking if the uncertainty (sigma) in co2 is lower than the limit; if not we need to do more simulations
+	else 
+		#In case If doesn't satisfy, (which means the uncertainty is lower than 2% for all points), break out of this loop and finish Active learning, the model is ready
+		echo " " >> rel_co2.csv
+		echo " " >> rel_ch4.csv
+		break
+	fi
+done
+
+#for loop is finished
