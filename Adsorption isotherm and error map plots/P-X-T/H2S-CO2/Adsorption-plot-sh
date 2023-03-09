@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#$ -q hpc@@colon 
+#$ -N Adsorption_5%_PX
+
+#module load python
+#python3 GP_Adsorption_plot_PX.py 
+
+#Creating the variable for X
+MF=(0.02 0.116 0.212 0.308 0.404 0.5 0.596 0.692 0.788 0.884 0.98)
+TEMP=(200 240 280 320 360 400)
+module load python
+python3 GP_Adsorption_plot_PX.py
+for ((i=0;i<=10;i++))
+do
+mkdir ${MF[$i]}
+cd ${MF[$i]}
+for ((j=0;j<=5;j++))
+do
+mkdir ${TEMP[$j]}
+cd ${TEMP[$j]}
+cp ../../adsorption_${MF[$i]}_${TEMP[$j]}.csv ../../GP_adplot.py .
+sed -i 's/XXX/'${MF[$i]}'/' GP_adplot.py
+sed -i 's/YYY/'${TEMP[$j]}'/' GP_adplot.py
+python3 GP_adplot.py
+cp *.png ../../
+cd ../
+done
+cd ../
+done
+python3 GP_relative_Error.py
