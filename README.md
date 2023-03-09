@@ -10,7 +10,7 @@ Active-learning-sh is the model updation handler which works in linux environmen
 Same process as P-X phase space.
 
 ## System ##
-<img width="1104" alt="Screen Shot 2023-03-09 at 1 20 32 AM" src="https://user-images.githubusercontent.com/36941306/223937399-ecea6d9d-b9b9-4412-b038-f56f7f2fe761.png">
+<img width="1227" alt="Screen Shot 2023-03-09 at 1 24 16 AM" src="https://user-images.githubusercontent.com/36941306/223938253-d6953813-48cd-44b8-8aee-1f82f98f2d53.png">
 
 ## Algorithm ##
 A general explanation of the workflow is outline below:
