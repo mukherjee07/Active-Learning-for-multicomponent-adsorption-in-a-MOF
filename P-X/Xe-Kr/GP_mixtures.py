@@ -169,8 +169,8 @@ kernel_co2 = RationalQuadratic(length_scale=1,alpha=0.5,length_scale_bounds=(1e-
 kernel_ch4 = RationalQuadratic(length_scale=1,alpha=0.5,length_scale_bounds=(1e-15,1e15),alpha_bounds=(1e-15,1e15))
 
 #creating the GP instances for co2 and ch4
-gp_co2 = GaussianProcessRegressor(kernel=kernel_co2, alpha=1e-5,n_restarts_optimizer=1000, normalize_y=True)
-gp_ch4 = GaussianProcessRegressor(kernel=kernel_ch4, alpha=1e-5,n_restarts_optimizer=1000, normalize_y=True)
+gp_co2 = GaussianProcessRegressor(kernel=kernel_co2, alpha=1e-5,n_restarts_optimizer=100, normalize_y=True)
+gp_ch4 = GaussianProcessRegressor(kernel=kernel_ch4, alpha=1e-5,n_restarts_optimizer=100, normalize_y=True)
 
 #print(type(x_s),type(y.T))
 #print(y.T)
