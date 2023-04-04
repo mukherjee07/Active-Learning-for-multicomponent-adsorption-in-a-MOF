@@ -169,8 +169,8 @@ kernel_co2 = RBF(length_scale=1,length_scale_bounds=(1e-15,1e15))
 kernel_ch4 = RBF(length_scale=1,length_scale_bounds=(1e-15,1e15)) 
 
 #creating the GP instances for co2 and ch4
-gp_co2 = GaussianProcessRegressor(kernel=kernel_co2, alpha=1e-4,n_restarts_optimizer=10000, normalize_y=True)
-gp_ch4 = GaussianProcessRegressor(kernel=kernel_ch4, alpha=1e-4,n_restarts_optimizer=10000, normalize_y=True)
+gp_co2 = GaussianProcessRegressor(kernel=kernel_co2, alpha=1e-4,n_restarts_optimizer=100, normalize_y=True)
+gp_ch4 = GaussianProcessRegressor(kernel=kernel_ch4, alpha=1e-4,n_restarts_optimizer=100, normalize_y=True)
 
 #print(type(x_s),type(y.T))
 #print(y.T)
