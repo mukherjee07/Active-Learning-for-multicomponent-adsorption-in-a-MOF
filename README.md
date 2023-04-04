@@ -58,7 +58,7 @@ Data requirement (% of ground truth):
 ```math
     \text{Data Requirement in \%} = \frac{{N_{Prior}} + {N_{Iterations-to-90\% Accuracy}}}{{N_{Ground-truth}}}\times100
 ```
-Note $N_{Prior}$ for P-X and P-X-T were constant at 54 and 90, respectively. While $N_{Ground-truth}$ was 2499 (51P x 49X) for P-X and 2542 (21P x 11X x 11T) for P-X-T.
+Note $N_{Prior}$ for P-X and P-X-T were constant at 54 and 90, respectively. While $N_{Ground-truth}$ was 2499 (51P x 49X) for P-X and 2541 (21P x 11X x 11T) for P-X-T.
 
 R<sup>2</sup> (The coefficient of Determination):
 ```math
