@@ -1,4 +1,4 @@
-name: AL_mixture_adsorptiob
+name: AL_mixture_adsorption
 
 dependencies:
  - matplotlib=3.6.3
