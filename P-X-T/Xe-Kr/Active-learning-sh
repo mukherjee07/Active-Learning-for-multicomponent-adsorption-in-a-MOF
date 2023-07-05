@@ -13,7 +13,7 @@ data="training.csv"
 One=1
 
 # Declaring the number of samples present in the prior sample
-N_Samp=$(wc -l < prior_Sample.csv)
+N_Samp=$(wc -l < training.csv)
 
 #Removing 1 from N_Samp, since the first row was coloumn names
 N_Samp=$[ $N_Samp - $One ]
