@@ -127,7 +127,7 @@ do
 		Next=$(awk 'FNR=='${Index}' {print $1}' complete.csv)
 
 		#Updating the prior --> posterior
-		echo "$Next" >> prior_Sample.csv
+		echo "$Next" >> training.csv
 	
 	else 
 		#In case If doesn't satisfy, (which means the uncertainty is lower than 2% for all points), break out of this loop and finish Active learning, the model is ready
