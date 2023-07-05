@@ -1,5 +1,5 @@
 # Active Learning for gas mixture adsorption prediction in a MOF #
-## Files and Folders ##
+## Files, Folders, and Description ##
 `Adsorption isotherm and Error map plots` folder: After Active learning is complete, these plots can be used to visualize the adsorption isotherm and error heat map for the final GP fits. All the data files are provided for visualization.
 
 `P-X` folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures.
