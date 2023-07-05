@@ -15,7 +15,7 @@ from sklearn.gaussian_process.kernels import ConstantKernel as C
 from sklearn.metrics import r2_score
 
 #Reading the dataset
-df = pd.read_csv('prior_Sample.csv',delimiter=',')
+df = pd.read_csv('training.csv',delimiter=',')
 df2 = pd.read_csv('complete.csv',delimiter=',')
 
 #### TESTING THE HEAD OF THE DATASET (Each testing section should be commented out) ####
@@ -317,7 +317,7 @@ GP_ch4 = np.ones((P_size,T_size,X2_size))
 #Counter for storing error values for 100K, 151K, 202K, 253K, 300K
 C_100 = 0
 
-#TEstinf X_test and y2, and y_pred
+####TEstinf X_test and y2, and y_pred
 #print(len(X_test),len(y_pred))
 for i in range(X1_size):
     for j in range(T_size):
