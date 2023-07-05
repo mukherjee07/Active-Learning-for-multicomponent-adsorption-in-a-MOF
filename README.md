@@ -58,7 +58,7 @@ The $\boldsymbol{\epsilon}$ (= $10^{-3}$) is added to the denominator to avoid n
 
 Data requirement (% of ground truth):
 ```math
-    \text{Data Requirement in \%} = \frac{{N_{Initial_training}} + {N_{Iterations-to-90\% PAC}}}{{N_{Ground-truth}}}\times100
+    \text{Data Requirement in \%} = \frac{{N_{Initial-training}} + {N_{Iterations-to-90\% PAC}}}{{N_{Ground-truth}}}\times100
 ```
 Note $N_{Prior}$ for P-X and P-X-T were constant at 54 and 90, respectively. While $N_{Ground-truth}$ was 2499 (51P x 49X) for P-X and 2541 (21P x 11X x 11T) for P-X-T.
 
