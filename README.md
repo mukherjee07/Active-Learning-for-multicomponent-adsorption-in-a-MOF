@@ -13,6 +13,8 @@
 `P-X-T` folder: Active learning code for adsorption prediction in P-X-T phase space for 3 gas mixtures.
 Same process as P-X phase space.
 
+`Kernel_opt` folder: This includes the Kernel optimization python code with the datafiles for three gases for P-X and P-X-T cases having different kernel combination upto 500 iterations (39 for P-X-T and 12 for P-X).
+
 ## System ##
 The goal was to predict the adsorption isotherm of a binary mixture adsorption in a Cu-BTC MOF (also known as HKUST-1) using an Active learning protocol.
 
