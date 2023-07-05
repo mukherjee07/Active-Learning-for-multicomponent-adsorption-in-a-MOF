@@ -15,6 +15,8 @@ Same process as P-X phase space.
 
 `Kernel_opt` folder: This includes the Kernel optimization python code with the datafiles for three gases for P-X and P-X-T cases having different kernel combination upto 500 iterations (39 for P-X-T and 12 for P-X).
 
+`raspa2_May_2018` folder: This is the submodule of the raspa version which was used to generate the ground truth data. This version is of May 8 2018. It was originally cloned from the University of Amsterdam github link (original developed David Dubbledam and co.).
+ 
 ## System ##
 The goal was to predict the adsorption isotherm of a binary mixture adsorption in a Cu-BTC MOF (also known as HKUST-1) using an Active learning protocol.
 
