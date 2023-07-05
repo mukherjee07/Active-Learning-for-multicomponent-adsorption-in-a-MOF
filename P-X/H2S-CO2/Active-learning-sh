@@ -7,7 +7,7 @@
 ## To run methane in Cu-BTC MOF simulations until we get a max. rel_ch4ative error within 2%
 
 #Making a datafile
-data="prior_Sample.csv"
+data="training.csv"
 
 #Initialising a variable called one
 One=1
@@ -127,7 +127,7 @@ do
 		Next=$(awk 'FNR=='${Index}' {print $1}' complete.csv)
 
 		#Updating the prior --> posterior
-		echo "$Next" >> prior_Sample.csv
+		echo "$Next" >> training.csv
 	
 	else 
 		#In case If doesn't satisfy, (which means the uncertainty is lower than 2% for all points), break out of this loop and finish Active learning, the model is ready
