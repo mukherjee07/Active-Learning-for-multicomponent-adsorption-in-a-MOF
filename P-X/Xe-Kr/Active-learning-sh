@@ -7,13 +7,13 @@
 ## To run methane in Cu-BTC MOF simulations until we get a max. rel_ch4ative error within 2%
 
 #Making a datafile
-data="prior_Sample.csv"
+data="training.csv"
 
 #Initialising a variable called one
 One=1
 
 # Declaring the number of samples present in the prior sample
-N_Samp=$(wc -l < prior_Sample.csv)
+N_Samp=$(wc -l < training.csv)
 
 #Removing 1 from N_Samp, since the first row was coloumn names
 N_Samp=$[ $N_Samp - $One ]
