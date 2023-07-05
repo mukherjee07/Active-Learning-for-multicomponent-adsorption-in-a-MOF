@@ -6,7 +6,7 @@
 
 The training.csv and complete.csv are the training data and ground truth data for the systems.
 The training.csv provided in these folders are the initial training set as defined in the paper. As the AL algorithm start, it will update the next set of training points in this file only.
-mean.csv is the datafile that will be generated when the AL algorithm starts. This datafile contains the GP-MRE for both the species, the maximum GP relative errors, the MREs, $R^2$'s, perceived accrucies (with 2% $\Beta$ as well as 5% $\Beta for P-X-T, while 1% and 2% for P-X, for comparision purposes).
+mean.csv is the datafile that will be generated when the AL algorithm starts. This datafile contains the GP-MRE for both the species, the maximum GP relative errors, the MREs, $R^2$'s, perceived accrucies (with 2% $\beta$ as well as 5% $\beta$ for P-X-T, while 1% and 2% for P-X, for comparision purposes).
 GP_mixtures.py is the Active learning engine (with dual-GP model)
 Active-learning-sh is the model updation handler which works in linux environment. This was based on Notre Dame Center for computing resource which is a grid-engine system. One can modify the first few lines depending on the specific linux environment or to run it locally, the first line can be removed as well.
 
