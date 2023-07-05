@@ -125,7 +125,7 @@ do
 		Next=$(awk 'FNR=='${Index}' {print $1}' complete.csv)
 
 		#Updating the prior --> posterior
-		echo "$Next" >> prior_Sample.csv
+		echo "$Next" >> training.csv
 	
 	##Checking if the uncertainty (sigma) in co2 is lower than the limit; if not we need to do more simulations
 	else 
