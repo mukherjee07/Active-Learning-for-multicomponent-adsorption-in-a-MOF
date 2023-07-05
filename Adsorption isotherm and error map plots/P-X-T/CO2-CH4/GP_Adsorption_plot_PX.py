@@ -35,7 +35,7 @@ class MyGPR(GaussianProcessRegressor):
         return theta_opt, func_min
 
 #Reading the dataset
-df = pd.read_csv('prior_Sample.csv',delimiter=',')
+df = pd.read_csv('training.csv',delimiter=',')
 df2 = pd.read_csv('complete.csv',delimiter=',')
 
 #### TESTING THE HEAD OF THE DATASET (Each testing section should be commented out) ####
