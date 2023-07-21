@@ -1,8 +1,8 @@
 # Active Learning for gas mixture adsorption prediction in a MOF #
 ## Files, Folders, and Description ##
-`Adsorption isotherm and Error map plots` folder: After Active learning is complete, these plots can be used to visualize the adsorption isotherm and error heat map for the final GP fits. All the data files are provided for visualization.
+[`Adsorption isotherm and Error map plots`](Adsorption isotherm and Error map plots) folder: After Active learning is complete, these plots can be used to visualize the adsorption isotherm and error heat map for the final GP fits. All the data files are provided for visualization.
 
-`P-X` folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures.
+[`P-X`](P-X) folder: Active learning code for adsorption prediction in P-X phase space for 3 gas mixtures.
 <ul>
   <li>training.csv and complete.csv are the training data and ground truth data for the systems. The training.csv provided in these folders are the initial training set as defined in the paper. As the AL algorithm start, it will update the next set of training points in this file only.</li>
   <li>mean.csv is the datafile that will be generated when the AL algorithm starts. This datafile contains the GP-MRE for both the species, the maximum GP relative errors, the MREs, $R^2$'s, perceived accrucies (with $\beta$ value of 2% as well as 5% for P-X-T, while 1% and 2% for P-X, for comparision purposes).</li>
@@ -10,12 +10,12 @@
   <li>Active-learning-sh is the model updation handler which works in linux environment. This was based on Notre Dame Center for computing resource which is a grid-engine system. One can modify the first few lines depending on the specific linux environment or to run it locally, the first line can be removed as well.</li>
 </ul>
 
-`P-X-T` folder: Active learning code for adsorption prediction in P-X-T phase space for 3 gas mixtures.
+[`P-X-T`](P-X-T) folder: Active learning code for adsorption prediction in P-X-T phase space for 3 gas mixtures.
 Same process as P-X phase space.
 
-`Kernel_opt` folder: This includes the Kernel optimization python code with the datafiles for three gases for P-X and P-X-T cases having different kernel combination upto 500 iterations (39 for P-X-T and 12 for P-X).
+[`Kernel_opt`](Kernel_opt) folder: This includes the Kernel optimization python code with the datafiles for three gases for P-X and P-X-T cases having different kernel combination upto 500 iterations (39 for P-X-T and 12 for P-X).
 
-`raspa2_May_2018` folder: This is the submodule of the raspa version which was used to generate the ground truth data. This version is of May 8 2018. It was originally cloned from the University of Amsterdam github link (original developers are David Dubbledam and co.).
+[`raspa2_May_2018`](raspa2_May_2018) folder: This is the submodule of the raspa version which was used to generate the ground truth data. This version is of May 8 2018. It was originally cloned from the University of Amsterdam github link (original developers are David Dubbledam and co.).
  
 ## System ##
 The goal was to predict the adsorption isotherm of a binary mixture adsorption in a Cu-BTC MOF (also known as HKUST-1) using an Active learning protocol.
