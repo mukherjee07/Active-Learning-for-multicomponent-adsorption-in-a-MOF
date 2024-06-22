@@ -92,3 +92,6 @@ Results for the P-X-T phase space:
 | Xe-Kr | RBF+RBF+RBF | 6.650 | 4.850 | 7.025 | 0.990 | 0.990|
 | H<sub>2</sub>S-CO<sub>2</sub> | RQ | 5.549 | 8.276 | 11.682 | 0.976 | 0.986 |
 
+Update this work has been published in the RSC Digital Discovery journal and is free to download:
+
+https://pubs.rsc.org/en/content/articlehtml/2023/dd/d3dd00106g
